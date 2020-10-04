@@ -1,4 +1,4 @@
-# This program reads in a poem from a text file and prints it backwards, then randomly, and lastly prints only even numbered lines - with each odd line being a randomly selected one instead of the original line
+# This program reads in a poem from a text file and prints it backwards, then randomly, and lastly prints the original line only if it is an odd numbered line - otherwise it prints a random line
 import random
 
 #  file IO for list manipulation
@@ -23,19 +23,21 @@ def lines_printed_random(lines_list):
 def lines_printed_custom(lines_list):
   # loop to print the whole poem
   for i in range(len(lines_list)):
-    # print only even lines
+    # print the original line only if odd
     if i % 2 == 0:
-      print(lines_list[i])
-    # on each odd line, print a randomly selected line from the poem instead of the original line
+      print(i+1,lines_list[i])
+    # on each even numbered line, print a randomly selected line from the poem instead
     else:
         random_line = random.randint(0,len(lines_list)-1)
-        print(lines_list[random_line])
+        print("*",lines_list[random_line])
 
 
 def main():
   poem_lines = get_file_lines("poem.txt")
   lines_printed_backwards(poem_lines)
+  print("-"*40,"\n")
   lines_printed_random(poem_lines)
+  print("-"*40,"\n")
   lines_printed_custom(poem_lines)
 
 main()
