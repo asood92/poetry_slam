@@ -8,7 +8,7 @@ def get_file_lines(filename):
   return poem_lines
 
 def lines_printed_backwards(lines_list):
-  # iterate through the list, and print, decrementing from len(lines_list) to 0
+  # iterate through the list, and print, decrementing from the last element to  -1 (not included)
   for i in range(len(lines_list)-1, -1, -1):
     print(i+1,lines_list[i])
 
