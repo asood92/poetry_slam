@@ -1,7 +1,7 @@
 # This program reads in a poem from a text file and prints it backwards, then randomly, and lastly prints only even numbered lines - with each odd line being a randomly selected one instead of the original line
 import random
 
-# basic file IO for access
+#  file IO for list manipulation
 def get_file_lines(filename):
   poem = open(filename, "r")
   poem_lines = poem.readlines()
