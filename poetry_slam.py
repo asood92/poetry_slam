@@ -27,7 +27,7 @@ def lines_printed_custom(lines_list):
         # print the original line only if odd
         if i % 2 == 0:
             print(i + 1, lines_list[i])
-        # on each even numbered line, print a randomly selected line from the poem instead
+        # on each even numbered line, print a randomly selected line from the poem
         else:
             random_line = random.randint(0, len(lines_list) - 1)
             print("*", lines_list[random_line])
