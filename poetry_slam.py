@@ -16,7 +16,7 @@ def lines_printed_backwards(lines_list):
 def lines_printed_random(lines_list):
     # loop to print the whole poem
     for i in range(len(lines_list)):
-        # randomly select a line between element 0 and the last element, then print
+        # randomly select a line between element 0 and the last element, then print it
         random_line = random.randint(0, len(lines_list) - 1)
         print(lines_list[random_line])
 
